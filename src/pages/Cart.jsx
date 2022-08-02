@@ -1,8 +1,12 @@
 import React from "react";
-// import {NotFoundBlock} from "../components/CartBlock";
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+
 
 export const Cart = () => {
+    const dispatch = useDispatch();
+    const items = useSelector((state) => state.cart.items);
+
     return (
         <div className="container container--cart">
             <div className="cart">
@@ -258,7 +262,6 @@ export const Cart = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className="cart__bottom">
                     <div className="cart__bottom-details">
