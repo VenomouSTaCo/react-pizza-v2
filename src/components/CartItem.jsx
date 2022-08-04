@@ -15,7 +15,7 @@ const CartItem = ({id, title, type, price, size, count, imageUrl}) => {
         if (count === 1) {
             if (window.confirm('Ты действительно хочешь удалить товар?')) {
                 dispatch(
-                    minusItem(id)
+                    removeItem(id)
                 )
             }
         } else {
